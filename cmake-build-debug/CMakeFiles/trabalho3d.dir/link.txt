@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/trabalho3d.dir/main.cpp.o CMakeFiles/trabalho3d.dir/tinyxml2.cpp.o CMakeFiles/trabalho3d.dir/player.cpp.o CMakeFiles/trabalho3d.dir/objloader.cpp.o CMakeFiles/trabalho3d.dir/material.cpp.o  -o trabalho3d  /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libGLU.so /usr/lib/x86_64-linux-gnu/libglut.so 

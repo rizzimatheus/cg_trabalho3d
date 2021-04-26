@@ -1,0 +1,3 @@
+/home/rizzi/ufes/cg/trabalho3d/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/rizzi/ufes/cg/trabalho3d/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/rizzi/ufes/cg/trabalho3d/cmake-build-debug/CMakeFiles/trabalho3d.dir
