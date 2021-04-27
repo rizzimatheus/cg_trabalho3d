@@ -469,15 +469,15 @@ void DesenhaMinimapa()
     glColor3f(1.0, 1.0, 1.0);
     glLineWidth(2.0);
     glBegin(GL_LINE_LOOP);
-    glVertex3f(1-0.5*(Width/maior),0.5*(Height/maior),1);
-    glVertex3f(1,0.5*(Height/maior),1);
+    glVertex3f(1-0.25*(Width/maior),0.25*(Height/maior),1);
+    glVertex3f(1,0.25*(Height/maior),1);
     glVertex3f(1,0,1);
-    glVertex3f(1-0.5*(Width/maior),0,1);
+    glVertex3f(1-0.25*(Width/maior),0,1);
     glEnd();
 
     glPushMatrix();
-    GLfloat minimapa_x = ( -player1.getGx() - (-Width /2) )/( (Width /2) - (-Width /2) ) * (1 - (1-0.5*(Width/maior))) + (1-0.5*(Width/maior));
-    GLfloat minimapa_y = ( player1.getGz() - (-Height/2) )/( (Height/2) - (-Height/2) ) * (0.5*(Height/maior) - 0) + 0;
+    GLfloat minimapa_x = ( -player1.getGx() - (-Width /2) )/( (Width /2) - (-Width /2) ) * (1 - (1-0.25*(Width/maior))) + (1-0.25*(Width/maior));
+    GLfloat minimapa_y = ( player1.getGz() - (-Height/2) )/( (Height/2) - (-Height/2) ) * (0.25*(Height/maior) - 0) + 0;
 
     glTranslatef(minimapa_x,minimapa_y,0);
     int sides = 30;
@@ -487,14 +487,14 @@ void DesenhaMinimapa()
     for (int a = 0; a < 360; a += 360 / sides)
     {
         double heading = a * MY_PI / 180;
-        glVertex3f(cos(heading) * (0.5*player1.getRadius()/maior), sin(heading) * (0.5*player1.getRadius()/maior), 1);
+        glVertex3f(cos(heading) * (0.25*player1.getRadius()/maior), sin(heading) * (0.25*player1.getRadius()/maior), 1);
     }
     glEnd();
     glPopMatrix();
 
     glPushMatrix();
-    minimapa_x = ( -player2.getGx() - (-Width/2) )/( (Width/2) - (-Width/2) ) * (1 - (1-0.5*(Width/maior))) + (1-0.5*(Width/maior));
-    minimapa_y = ( player2.getGz() - (-Height/2) )/( (Height/2) - (-Height/2) ) * (0.5*(Height/maior) - 0) + 0;
+    minimapa_x = ( -player2.getGx() - (-Width/2) )/( (Width/2) - (-Width/2) ) * (1 - (1-0.25*(Width/maior))) + (1-0.25*(Width/maior));
+    minimapa_y = ( player2.getGz() - (-Height/2) )/( (Height/2) - (-Height/2) ) * (0.25*(Height/maior) - 0) + 0;
 
     glTranslatef(minimapa_x,minimapa_y,0);
     glColor3f(1, 0, 0);
@@ -503,7 +503,7 @@ void DesenhaMinimapa()
     for (int a = 0; a < 360; a += 360 / sides)
     {
         double heading = a * MY_PI / 180;
-        glVertex3f(cos(heading) * (0.5*player2.getRadius()/maior), sin(heading) * (0.5*player2.getRadius()/maior), 1);
+        glVertex3f(cos(heading) * (0.25*player2.getRadius()/maior), sin(heading) * (0.25*player2.getRadius()/maior), 1);
     }
     glEnd();
     glPopMatrix();
