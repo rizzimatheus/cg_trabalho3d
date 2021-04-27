@@ -324,7 +324,7 @@ int Player::Soca(GLfloat dx, GLfloat width, Player &otherPlayer, int reset)
 
 
     // Faz com que o player tenha que voltar com o braço após fazer ponto para pontuar novamente
-    if ( (alpha_punch < 6 or alpha_punch > 19) or (role == 1) ) {
+    if ( (alpha_punch < 6 or (alpha_punch > 12 and alpha_punch < 19)) or (role == 1) ) {
         socoDisponivel = true;
     }
     if (reset) {

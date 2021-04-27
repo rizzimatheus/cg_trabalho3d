@@ -847,6 +847,7 @@ void keyPress(unsigned char key, int x, int y)
 
             // Coloca a câmera 3 atras do lutador
             camXZAngle = 180+player1.getDirection();
+            lookatToggle = 3;
 
             printf("\n\nReiniciando o Jogo...\n\n");
             break;
