@@ -574,7 +574,6 @@ void renderScene(void)
             fim = true;
         }
 
-
         //Controla camera
         if (lookatToggle == 3) {
             // camera circular
@@ -847,6 +846,7 @@ void keyPress(unsigned char key, int x, int y)
 
             // Coloca a câmera 3 atras do lutador
             camXZAngle = 180+player1.getDirection();
+            camXYAngle = INICIAL_CAM_XY_ANGLE;
             lookatToggle = 3;
 
             printf("\n\nReiniciando o Jogo...\n\n");
