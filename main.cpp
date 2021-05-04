@@ -1333,7 +1333,7 @@ int main(int argc, char *argv[])
     // Create the window.
     glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
     glutInitWindowPosition(2000,30);
-    glutCreateWindow("Trabalho 3D - Matheus Rizzi");
+    glutCreateWindow("Trabalho 3D - Matheus Rizzi e Renan Bottacine");
 
     setPlayers(player1, player2, argv[1], arenaX, arenaZ);
 
