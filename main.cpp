@@ -107,7 +107,6 @@ void PrintText(GLfloat x, GLfloat y, const char * text, double r, double g, doub
 void ImprimePlacar(GLfloat x, GLfloat y, double r, double g, double b)
 {
     //Cria a string a ser impressa
-    char *tmpStr;
     sprintf(str1, "Score Player 1: %d", player1.getScore() );
     sprintf(str2, "Score Player 2: %d", player2.getScore() );
 
@@ -128,7 +127,6 @@ void ImprimeVencedor(int vencedor, GLfloat x, GLfloat y)
     }
 
     //Cria a string a ser impressa
-    char *tmpStr;
     sprintf(str1, "PLAYER %d VENCEU!!!", vencedor );
     sprintf(str2, "Pressione '0' para reiniciar o jogo.");
 

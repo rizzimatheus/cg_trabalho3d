@@ -85,8 +85,6 @@ bool mesh::loadMesh(string path){
 
 //desenha a malha
 void mesh::draw(GLuint texture){
-    int cont=0;
-
 //    GLfloat materialEmission[] = { 0.10, 0.10, 0.10, 1};
 //    GLfloat materialColorA[] = { 0.1, 0.1, 0.1, 0.1};
 //    GLfloat materialColorD[] = { .90, .90, .90, 1};
