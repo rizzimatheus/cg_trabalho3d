@@ -30,6 +30,7 @@ int keyStatus[256];
 GLdouble incKeyIdle = 1;
 
 bool night_mode = true;
+int pontual_light = 0;
 
 //Controles de câmera
 int lookatToggle = 3;
@@ -781,18 +782,39 @@ void renderScene(void)
                 glPointSize(15);
                 glColor3f(1.0, 1.0, 0.0);
                 glBegin(GL_POINTS);
-                glVertex3f(light_position1[0], light_position1[1], light_position1[2]);
-                glVertex3f(light_position2[0], light_position2[1], light_position2[2]);
-                glVertex3f(light_position3[0], light_position3[1], light_position3[2]);
-                glVertex3f(light_position4[0], light_position4[1], light_position4[2]);
+                if (pontual_light == 0 || pontual_light == 1) {
+                    glVertex3f(light_position1[0], light_position1[1], light_position1[2]);
+                }
+                if (pontual_light == 0 || pontual_light == 2) {
+                    glVertex3f(light_position2[0], light_position2[1], light_position2[2]);
+                }
+                if (pontual_light == 0 || pontual_light == 3) {
+                    glVertex3f(light_position3[0], light_position3[1], light_position3[2]);
+                }
+                if (pontual_light == 0 || pontual_light == 4) {
+                    glVertex3f(light_position4[0], light_position4[1], light_position4[2]);
+                }
                 glEnd();
                 glEnable(GL_LIGHTING);
             }
 
-            glEnable(GL_LIGHT3);
-            glEnable(GL_LIGHT4);
-            glEnable(GL_LIGHT5);
-            glEnable(GL_LIGHT6);
+            glDisable(GL_LIGHT3);
+            glDisable(GL_LIGHT4);
+            glDisable(GL_LIGHT5);
+            glDisable(GL_LIGHT6);
+
+            if (pontual_light == 0 || pontual_light == 1) {
+                glEnable(GL_LIGHT3);
+            }
+            if (pontual_light == 0 || pontual_light == 2) {
+                glEnable(GL_LIGHT4);
+            }
+            if (pontual_light == 0 || pontual_light == 3) {
+                glEnable(GL_LIGHT5);
+            }
+            if (pontual_light == 0 || pontual_light == 4) {
+                glEnable(GL_LIGHT6);
+            }
 
             glDisable(GL_LIGHT0);
             glDisable(GL_LIGHT1);
@@ -902,6 +924,13 @@ void keyPress(unsigned char key, int x, int y)
                 player2.setTexture(0);
             } else {
                 player2.setTexture(player2.getTexture() + 1);
+            }
+            break;
+        case 'i':
+            if (pontual_light == 4) {
+                pontual_light = 0;
+            } else {
+                pontual_light++;
             }
             break;
         case 27 :
