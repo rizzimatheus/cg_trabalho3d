@@ -29,7 +29,7 @@ int keyStatus[256];
 
 GLdouble incKeyIdle = 1;
 
-bool night_mode = true;
+bool night_mode = false;
 int pontual_light = 0;
 
 //Controles de câmera
